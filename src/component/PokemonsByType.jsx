@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {  useParams } from "react-router-dom"
+import {  useParams, Link } from "react-router-dom"
 
 
 
@@ -34,12 +34,12 @@ const PokemonsByType = ()=>{
             {pokemons.map((pokemon)=>{
                 return(
                     <article className="pkmn-details">
-                    <h3>{pokemon.name}</h3>
+                    <Link to = {`/details-pokemon/${pokemon.id}`}><h3>{pokemon.name}</h3></Link>
                     <img className="img-pkmn" src={pokemon.image} alt="" />
 
                     {pokemon.apiTypes.map((type)=>{
                         return(
-                            <p>{type.name}</p>
+                            <Link to={`/pokemons-by-type/${type.name}`}><p>{type.name}</p></Link>
                         )
                     })}
 
