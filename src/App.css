@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration:none ;
+}
+
+.article-list h3{
+  color: #000000;
+}
+
+
+.article-list h3:hover{
+  color: #FF2323;
+}
+
+h2, h3{
+  text-transform: uppercase;
+}
+
+.img-pkmn{
+  width: 200px;
+}
+
+
+container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+header{
+  margin-bottom: 10rem;
+  background-color: #FF2323;
+  display: flex;
+  justify-content: center;
+  border-bottom: 20px solid black;
+  height: 300px;
+}
+
+.round-pokeball{
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border: 15px solid black;
+  border-radius: 50%;
+  transform: translateY(190%);
+}
+
+.round-pokeball:hover{
+  background-color: rgb(164, 164, 164);
+}
+
+header a{
+  color: black;
+}
+
+
+section{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pkmn-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.spinner{
+  width: 100px;
+  animation-name: spinner-pokeball;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spinner-pokeball {
+
+  from{
+    transform: rotate(0deg);
+  }to{
+    transform: rotate(360deg);
+  }
+  
+}
