@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './page/HomePage'
 import PokemonDetailsPage from './page/PokemonDetailsPage'
+import PokemonsByTypePage from './page/PokemonsByTypePage'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/"  element = {<HomePage />}/>
           <Route path="/details-pokemon/:pokemonID"  element = {<PokemonDetailsPage />}/>
+          <Route path="/pokemons-by-type/:type"  element = {<PokemonsByTypePage />}/>
         </Routes>
       </BrowserRouter>
       

@@ -26,10 +26,17 @@ const PokemonsList = ()=>{
                 <>
                             {pokemons.map((pokemon)=>{
                 return(
-                    <article className="article-list" key={pokemon.id}>
-
+                    <article key={pokemon.id}>
                         <Link to = {`/details-pokemon/${pokemon.id}`}><h3>{pokemon.name}</h3></Link>
+
                         <img className="img-pkmn" src={pokemon.image} alt={pokemon.name} />
+                        
+                        {pokemon.apiTypes.map((type)=>{
+                        return(
+                            <Link to={`/pokemons-by-type/${type.name}`}><p>{type.name}</p></Link>
+                        )
+                    })}
+
 
 
                     </article>
